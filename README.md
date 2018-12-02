@@ -65,6 +65,7 @@ results : dict array. detail is in below
     }
 ]
 ```
+name and similarity are null when face is detected but it is not registered person's face
 
 ### 4\. Run
 ```shell
