@@ -60,12 +60,12 @@ results : dict array. detail is in below
         'top': integer,
         'width': integer,
         'height': integer,
-        'name': string | null,
-        'similarity': double | null,
+        'name': string | None,
+        'similarity': double | None,
     }
 ]
 ```
-name and similarity are null when face is detected but it is not registered person's face
+`name` and `similarity` are None when face is detected but it is not registered person's face
 
 ### 4\. Run
 ```shell

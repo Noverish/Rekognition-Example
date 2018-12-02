@@ -80,4 +80,7 @@ def _search(client, collection_id, image):
             'similarity': matches[0]['Similarity']
         }
     else:
-        return None
+        return {
+            'name': None,
+            'similarity': None
+        }

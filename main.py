@@ -11,8 +11,6 @@ from src.rekognition import collection_exists, create_collection, upload_face
 from src.rekognition.recognize import recognize_face
 
 
-
-
 def process_results(img_path, image, results):
     draw = ImageDraw.Draw(image)
 
@@ -25,9 +23,10 @@ def process_results(img_path, image, results):
         rect = [left, top, left + width, top + height]
         draw.rectangle(rect, outline="red")
 
-        pos = (left, top + height)
-        text = result['name'] + ' ' + str(result['similarity'])
-        draw.text(pos, text)
+        if result['name'] is not None:
+            pos = (left, top + height)
+            text = result['name'] + ' ' + str(result['similarity'])
+            draw.text(pos, text)
 
     rel_path = img_path.replace(normpath(config['img_src']), "")[1:]
     save_path = join('outputs', rel_path)
