@@ -1,0 +1,8 @@
+{
+  "profile": "noverish",
+  "bucket_name": "rekognition-kidsharu",
+  "bucket_region": "ap-northeast-2",
+  "img_src": "/Users/noverish/Desktop/children-pictures/age5",
+  "face_src": "/Users/noverish/Desktop/faces",
+  "collection_id": "test"
+}
